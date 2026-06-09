@@ -8,6 +8,7 @@
 # from django.contrib import messages
 # from datetime import datetime
 
+from django.shortcuts import render
 from django.http import JsonResponse
 from django.contrib.auth import login, authenticate
 import logging
@@ -63,3 +64,8 @@ def login_user(request):
 # Create a `add_review` view to submit a review
 # def add_review(request):
 # ...
+def about(request):
+    return render(request, 'About.html')
+
+def contact(request):
+    return render(request, 'Contact.html')
